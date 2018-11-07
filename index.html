@@ -1,0 +1,306 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Andrew Albright - Portfolio</title>
+		<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Patrick+Hand|Permanent+Marker" rel="stylesheet"> 
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <style>
+        /* COLORS
+        dark blue: #3C6785
+        med blue: #9BB5C6
+        lighter blue: #7abdeb;
+        light blue: #5e8dad
+        light pink: #ffd8de
+        med pink:   #F19FAD
+        in-between: #c29ff1;
+        
+        blue shadow: #2e3e4a;
+        purple shadow: #7f6e95;
+        pink shadow: #7e5c62;
+        */
+        .row {
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        @keyframes blue_to_pink {
+            0% {color: #7abdeb;}
+            50% {color: #c29ff1;}
+            100% {color: #be6a77;}
+        }
+
+        @keyframes shadow_blue_to_pink {
+            0% {text-shadow: 2px 5px 4px #2e3e4a;}
+            50% {text-shadow: 2px 5px 4px #695d79;}
+            100% {text-shadow: 2px 5px 4px #7e5c62;}
+        }
+        @keyframes scroll_bounce {
+            0% {transform: translateY(0);}
+            20% {transform: translateY(.0625em);}
+            40% {transform: translateY(.25em);}
+            80% {transform: translateY(.75em);}
+            100% {transform: translateY(1em);}
+        }
+        #bg_image {
+            background: url("city_bg_2_dark_5.jpg") no-repeat;
+            background-size: cover;
+            min-height: 100vh;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            /*animation: bg_hue 2s linear infinite alternate;*/
+        }
+        #bg_filter {
+            min-height: 100vh;
+            position: fixed;
+            top:0;
+            left: 0;
+            z-index: 0;
+            width: 100%;
+            opacity: 0;
+            /*animation: bg_hue 8s linear infinite alternate;*/
+        }
+        h1 {
+            font-family: 'Permanent Marker', sans-serif;
+        }
+        h2, h3, a, p {
+            font-family: 'Montserrat', sans-serif;
+        }
+        a {
+            color: #50a8f3;
+            font-weight: bold;
+        }
+        #about_me__section, #projects__section {
+            position: relative;
+        }
+        #about_me__section h2 {
+            font-size: 2.5em;
+        }
+        #about_me__section p {
+            font-size: 1.5em;
+        }
+        .font__mont {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .sect_header {
+            font-size: 6em;
+            margin: 1em auto .5em auto;
+        }
+
+        #first-name {
+            color: #5e8dad;
+            text-shadow: 2px 5px 4px #2e3e4a;
+            animation: blue_to_pink 4s linear infinite alternate, shadow_blue_to_pink 4s linear infinite alternate;
+        }
+        #last-name {
+            color: #5e8dad;
+            text-shadow: 2px 5px 4px #2e3e4a;
+            animation: blue_to_pink 4s linear infinite alternate, shadow_blue_to_pink 4s linear infinite alternate;
+        }
+        .color__white {
+            color: #fff;
+        }
+        .color__blue {
+            color: #5e8dad;
+        }
+        .color__pink {
+            color: #ffd8de;
+        }
+        .contact_link {
+            display: inline-block;
+            padding: .5em;
+        }
+        .contact_link__icon {
+            max-width: 5em;
+            height: auto;
+            width: 100%;
+            
+        }
+        .scroll_down__wrap {
+            position: absolute;
+            left: 0;
+            bottom: 2em;
+            width: 100%;
+            height: auto;
+            z-index: 10;
+        }
+        .scroll_down {
+            cursor: pointer;
+            font-family: 'Permanent Marker', sans-serif;
+            font-size: 2em;
+            position: relative;
+            animation: scroll_bounce .75s linear infinite alternate;
+        }
+        #projects_scroll {
+            
+        }
+        
+        .project_square_wrap {
+            padding:1em;
+        }
+        .project_square, .project_square_blue {
+            background: #c29ff1;
+            border-radius: .25em;
+            margin: .5em auto 1em auto;
+            width: 100%;
+            max-width: 36em;
+            height: auto;
+            padding: 2.5em 1em;
+            transition: filter .3s;
+        }
+        .project_square_blue {
+            background: linear-gradient(#77417d, #312450);
+        }
+        .project_square_blue:hover {
+            filter: hue-rotate(-45deg);
+            transition: filter .3s;
+        }
+        @media screen and (max-width: 1600px) {
+            .sect_header {
+                font-size: 5em;
+                margin: 1em auto .5em auto;
+            }
+            #about_me__section h2 {
+                font-size: 2.25em;
+            }
+            #about_me__section p {
+                font-size: 1.375em;
+            }
+           
+        }
+        @media screen and (max-width: 1366px) {
+            .sect_header {
+                font-size: 4em;
+                margin: 1em auto .5em auto;
+            }
+            #about_me__section h2 {
+                font-size: 2em;
+            }
+            #about_me__section p {
+                font-size: 1.25em;
+            }
+            
+        }
+        @media screen and (max-width: 48em) {
+            .sect_header {
+                font-size: 3em;
+                margin: 1em auto .5em auto;
+            }
+            #about_me__section h2 {
+                font-size: 2em;
+            }
+            #about_me__section p {
+                font-size: 1.25em;
+            }
+            
+            #bg_image {
+                background-position: center;
+            }
+             .scroll_down__wrap {
+                display: none;
+            }
+        }
+    </style>
+	</head>
+	<body>
+    <div class="container">
+        <div id="bg_image"></div>
+        <div id="bg_filter"></div>
+        <div id="about_me__section" class="row">
+            <div id="name-header__wrap" class="col-xs-12">
+                <h1 id="name-header" class="sect_header text-center">
+                    <span id="first-name">Andrew</span>
+                    <span id="last-name">Albright</span>
+                </h1>
+            </div>
+            <div class="col-xs-12">
+                <h2 class="color__white">MY NAME IS </h2>
+                <p class="color__white">
+                    Andrew Albright and I'm a Front-end Web Developer currently living in the Orange County area in California, U.S.A.
+                </p>
+                <h2 class="color__white">MY STRENGTHS ARE </h2>
+                <p class="color__white">
+                    HTML, CSS, Javascript, jQuery, Bootstrap, and knowing the year a movie was released (but only if I've seen the movie).
+                </p>
+                <h2 class="color__white">IN MY SPARE TIME </h2>
+                <p class="color__white">
+                    you can find me playing video games, watching cartoons, listening to music, or making music (usually under the name <a href="https://sugarmittens.bandcamp.com" target="_blank">Sugar Mittens</a>). 
+                </p>
+                <h2 class="color__white">YOU CAN CONTACT ME </h2>
+                <div class="contact_links__wrap">
+                    <a href="mailto:andrewalbright1@gmail.com" class="contact_link">
+                        <img class="contact_link__icon" src="gmail_logo.png"><br>
+                        andrewalbright1@gmail.com
+                    </a>
+                </div>
+            </div>
+            <div class="scroll_down__wrap">
+                <div class="scroll_down text-center">
+                    <span id="projects_scroll" class="text-center color__white">
+                        Projects<br>
+                        v
+                    </span>
+                </div>
+            </div>
+            
+
+        </div>
+        <div id="projects__section" class="row">
+            <div class="col-xs-12">
+                <h1 id="projects-header" class="sect_header text-center color__white">PROJECTS</h1>
+            </div>
+            <div class="col-xs-12">
+                <h2 class="text-center color__white">PERSONAL</h2>
+            </div>
+            <div class="col-xs-12 project_square_wrap text-center">
+                <div class="project_square_blue text-center">
+                    <div class="font__mont color__white">RANDOM CAT NAME</div>
+                </div>
+            </div>
+            <div class="col-xs-12">
+                <h2 class="text-center color__white">PROFESSIONAL</h2>
+            </div>
+            <div class="col-xs-12">
+                <div class="project_square_blue text-center">
+                    <div class="font__mont color__white">
+                        <img src="fre-logo.png" style="max-width: 100%;margin-bottom: 2em;">
+                        <p>
+                            <a href="https://www.fre.com" target="_blank">FRE.com - An online real estate marketplace. </a>
+                            <br><br>Built several web pages in collaboration with the marketing team using HTML, CSS, and Javascript. 
+                            Deployed through git. <br>
+                            Wrote Javascript interacting with the Google Maps API, and assisted with testing features in the admin section of the website.<br><br>
+                            <small><em>November 2016 to present</em></small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+         
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            var squaresLoaded = false;
+            $('#projects_scroll').click(function() {
+                $('html, body').animate({scrollTop: $('#projects__section').offset().top}, 1000);
+            });
+
+            $(window).scroll(function() {
+                console.log($(window).scrollTop());
+                
+                if ($(window).scrollTop() >= $('#projects__section').offset().top - ($('#projects__section').offset().top / 2)) {
+                    console.log("projects section");
+                    
+                    //$('#bg_filter').css('background', '#ffd8de');
+                    //$('#bg_filter').animate({opacity: .2}, 1000);
+                }
+            });
+        });
+    </script>
+	</body>
+</html>
