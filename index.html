@@ -30,20 +30,18 @@
         background: linear-gradient(45deg, #132536,#1b1336,#36121a); 
         opacity: 1
       }
-      #timeline-bg {
-        background: linear-gradient(45deg, #1b1336,#361225,#311311);
-        opacity:0;
-      }
-      #projects-bg {
-        background: linear-gradient(45deg, #173111,#113123,#132236);
-        opacity:0;
-      }
       
       .margin_top_p5em {
         margin-top: .5em;
       }
       .margin_top_p75em {
          margin-top: .75em;
+      }
+      .margin_top_1em {
+        margin-top: 1em;
+      }
+      .margin_top_1p5em {
+        margin-top: 1.5em;
       }
       br {
         line-height: 2;
@@ -80,17 +78,6 @@
         color: #ffeda1;
       }
       .text_gray {color:#999;}
-      .circle-nav {
-        border-radius:50%;
-        cursor: pointer;
-        display: block;
-        margin: auto;
-        padding: .625em 0;
-        width:3em;
-        height: 3em;
-        text-align: center;
-        transition: .2s;
-      }
       .fa-info {
         font-size:1.25em;
       }
@@ -98,15 +85,9 @@
         font-size: 3.5em;
       }
       .bg_header, .bg_header2 {
-        color: #433b58;
+        color: #5c5276;
         font-family: 'Indie Flower', sans-serif;
-        font-size: 8em;
-        position: absolute;
-        margin-top: -.5em;
-        z-index: -1;
-      }
-      .bg_header2 {
-        margin-top: -.75em;
+        font-size: 6em;
       }
      
       .hide-desk {
@@ -117,7 +98,7 @@
       }
       @media screen and (max-width: 48em) {
         .bg_header, .bg_header2 {
-          font-size: 5em;
+          font-size: 4.5em;
         }
         .main_header {
           font-size:3em;
@@ -136,8 +117,6 @@
   </head>
   <body>
     <div id="about-bg" class="main-bg current_bg"></div>
-    <div id="timeline-bg" class="main-bg"></div>
-    <div id="projects-bg" class="main-bg"></div>
     <div class="container">
 
       <div class="row">
@@ -150,20 +129,19 @@
             <br><br>
             <h1 class="cat_text bg_header">ABOUT ME</h1>
    
-            <p class="cat_text text_white margin_top_p75em">
+            <p class="cat_text text_white">
               Front-end Web Developer<br>
               I graduated from University of California, Irvine with a B.S. in Informatics with a specialization in Human-Computer Interaction. I studied UI/UX for various applications.<br>
-              I am currently living in the Orange County area in California.
+              I am currently living in the Orange County area in Southern California.
             </p>
-            <br><br>
+            <br>
             <h1 class="cat_text bg_header">MY SKILLS</h1>
 
-            <p class="cat_text text_white margin_top_p75em">
+            <p class="cat_text text_white">
                 HTML, CSS, Javascript, jQuery, Bootstrap, Git. <br>I also have some experience with Google Analytics, and I'm not afraid of public speaking.
             </p>
-            <br><br><br>
-            <h1 class="cat_text bg_header ">CONTACT ME</h1>
             <br>
+            <h1 class="cat_text bg_header">CONTACT ME</h1>
             <p class="cat_text text_white">
                 Email me at <a href="mailto:andrewalbright1@gmail.com" alt="Email address">andrewalbright1@gmail.com</a><br>
             </p>
