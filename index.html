@@ -7,7 +7,6 @@
     <meta name="author" content="Andrew Albright">
     <meta name="description" content="Andrew Albright's web portfolio">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend+Deca:400,700|Indie+Flower" type="text/css">
     <style>
@@ -58,7 +57,11 @@
       .container {
         max-width: 1280px;
       }
-      .pos_rel {position:relative;}
+      .elem_center {
+        display: block;
+        margin: auto;
+      }
+      .pos_rel {position:relative}
       #main-nav {
         background: none;
         display: block;
@@ -89,7 +92,11 @@
         font-family: 'Indie Flower', sans-serif;
         font-size: 6em;
       }
-     
+      .personal_img {
+        max-width: 100%;
+        border: .25em solid #fff;
+        margin: 1.25em auto;
+      }
       .hide-desk {
         display: none;
       }
@@ -125,23 +132,21 @@
       <div class="row">
         <div class="col-12">
           <br><br>
-          <!-- about section -->
           <div id="about_wrap" class="cat_wrap">
             <h1 class="main_header text_white"><small>My name is</small><br> <em>ANDREW ALBRIGHT</em></h1>
             <br><br>
-   
             <p class="text_white">
               Front-End Web Developer.<br>
               I am currently living in the Orange County area in Southern California.<br>
               Email me at <a href="mailto:andrewalbright1@gmail.com" alt="Email address">andrewalbright1@gmail.com</a>
             </p>
-            <br>
+            <br><br>
             <h1 class="bg_header">MY SKILLS</h1>
 
             <p class="text_white">
                 HTML, CSS, Javascript, jQuery, Bootstrap, Git, Google Analytics, Google Sheets, Microsoft Excel. <br>I'm also not afraid of public speaking.
             </p>
-            <br>
+            <br><br>
             <h1 class="bg_header bg_header_sm">MY EXPERIENCE</h1>
             <h3 class="text_white margin_bottom_0em">LFC Group of Companies</h3>
             <small class="text_white">November 2016 to July 2019</small><br><br>
@@ -151,41 +156,36 @@
               <li>Tested new website features by other programmers, and directed other programmers on how to improve new features.</li>
               <li> Produced analytics reports using Microsoft Excel and Google Analytics to show our current website traffic and how we could reduce the bounce rate across pages.</li>
             </ul>
-            <br>
+            <br><br>
             <h1 class="bg_header bg_header_sm">MY EDUCATION</h1>
             <h3 class="text_white margin_bottom_0em">University of California, Irvine</h3>
             <small class="text_white">2010 to 2015</small>
             <p class="text_white">B.S. in Informatics, specialization in Human-Computer Interaction</p>
-            <br>
+            <br><br>
+            <h1 class="bg_header bg_header_sm">PERSONAL PROJECTS</h1>
+            <p class="text_white">Here are some of my projects I've done in my spare time:</p>
+            <div class="col-sm-6">
+              <a href="overwatch_rand_team.html"><img class="elem_center personal_img" src="img/overwatch-random-team-preview.png"></a>
+              <h3><a href="overwatch-rand-team.html">Overwatch Random Team</a></h3>
+              <p class="text_white">Generate a random team from Overwatch.<br>
+              <small><em>With jQuery, randomly selects items from 3 arrays with no duplicates. Uses data from arrays to change text and image sources.</em></small>
+              </p>
+            
+            </div>
+            <br><br>
             <h1 class="bg_header bg_header_sm">CONTACT ME</h1>
             <p class="text_white">
                 Email me at <a href="mailto:andrewalbright1@gmail.com" alt="Email address">andrewalbright1@gmail.com</a><br>
-            </p>
-            <p id="ow_result" class=" text_white"></p>
-            
-          </div>
-          
-          
-        
-          
+            </p>       
+          </div>       
         </div>
       
-      </div>
-      
+      </div>    
     </div>
 
    
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-  /*
-  var tank = 8 * 7;
-  var dmg = 16 * 15;
-  var supp = 7 * 6;
-  var team = tank * dmg * supp;
-  console.log("hello " + team);
-  $('#ow_result').text(team + " combinations");
-*/
-</script>
+
   </body>
 </html>
