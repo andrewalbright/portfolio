@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+
+	<title>pretty background</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" >
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.2.min.js "></script>
+
+
+<style>
+  body {
+    background: #233243;
+    color:#fff;
+  }
+	.color_box {
+		background: linear-gradient(110deg,#fff, 20%, #30a3c0);
+		border:.125em solid #444;
+		border-radius:.25em;
+		margin:.75em auto;
+		height:2em;
+		width:2em;
+		position:relative;
+	}
+	@media screen and (max-width:80em) {
+		.color_box {
+			height:2em;
+		}
+	}
+		@keyframes flasher {
+		0%   { opacity: 1; }
+		75%  { opacity: 0.75; }
+		100% { opacity: 0; }
+	}
+  .page_bg {
+
+	}
+  #tile_wrap {
+    max-width:25em;
+    padding: 2em 0;
+  }
+	.tile_con {
+		display:block;
+		margin:2em auto;
+		max-width:100%;
+		width:100%; 
+	}
+	.color_bg {
+		background:#fff;
+		height:100%;
+		width:100%;
+		position:absolute;
+	}
+
+	
+	#box01 .color_bg {
+		animation: flasher 1.5s ease-in alternate infinite;
+	}
+	#box02 .color_bg {
+		animation: flasher 1.5s ease-in .25s alternate infinite;
+	}
+	#box03 .color_bg {
+		animation: flasher 1.5s ease-in .5s alternate infinite;
+	}
+	#box04 .color_bg {
+		animation: flasher 1.5s ease-in .75s alternate infinite;
+	}
+	#box05 .color_bg {
+		animation: flasher 1.5s ease-in 1s alternate infinite;
+	}
+	#box06 .color_bg {
+		animation: flasher 1.5s ease-in 1.25s alternate infinite;
+	}
+	#box07 .color_bg {
+		animation: flasher 1.5s ease-in 1.5s alternate infinite;
+	}
+	#box08 .color_bg {
+		animation: flasher 1.5s ease-in 1.75s alternate infinite;
+	}
+	#box09 .color_bg {
+		animation: flasher 1.5s ease-in 2s alternate infinite;
+	}
+	#box10 .color_bg {
+		animation: flasher 1.5s ease-in 2.25s alternate infinite;
+	}
+	#box11 .color_bg {
+		animation: flasher 1.5s ease-in 2.5s alternate infinite;
+	}
+	#box12 .color_bg {
+		animation: flasher 1.5s ease-in 2.75s alternate infinite;
+	}
+	#box13 .color_bg {
+		animation: flasher 1.5s ease-in 3s alternate infinite;
+	}
+	#box14 .color_bg {
+		animation: flasher 1.5s ease-in 3.25s alternate infinite;
+	}
+	#box15 .color_bg {
+		animation: flasher 1.5s ease-in 3.5s alternate infinite;
+	}
+	#box16 .color_bg {
+		animation: flasher 1.5s ease-in 3.75s alternate infinite;
+	}
+	#box17 .color_bg {
+		animation: flasher 1.5s ease-in 4s alternate infinite;
+	}
+	#box18 .color_bg {
+		animation: flasher 1.5s ease-in 4.25s alternate infinite;
+	}
+	#box19 .color_bg {
+		animation: flasher 1.5s ease-in 4.5s alternate infinite;
+	}
+	#box20 .color_bg {
+		animation: flasher 1.5s ease-in 4.75s alternate infinite;
+	}
+	#box21 .color_bg {
+		animation: flasher 1.5s ease-in 5s alternate infinite;
+	}
+	#box22 .color_bg {
+		animation: flasher 1.5s ease-in 5.25s alternate infinite;
+	}
+	#box23 .color_bg {
+		animation: flasher 1.5s ease-in 5.5s alternate infinite;
+	}
+	#box24 .color_bg {
+		animation: flasher 1.5s ease-in 5.75s alternate infinite;
+	}
+	#box25 .color_bg {
+		animation: flasher 1.5s ease-in 6s alternate infinite;
+	}
+	#box26 .color_bg {
+		animation: flasher 1.5s ease-in 6.25s alternate infinite;
+	}
+	#box27 .color_bg {
+		animation: flasher 1.5s ease-in 6.5s alternate infinite;
+	}
+	#box28 .color_bg {
+		animation: flasher 1.5s ease-in 6.75s alternate infinite;
+	}
+	#box29 .color_bg {
+		animation: flasher 1.5s ease-in 7s alternate infinite;
+	}
+	#box30 .color_bg {
+		animation: flasher 1.5s ease-in 7.25s alternate infinite;
+	}
+	#box31 .color_bg {
+		animation: flasher 1.5s ease-in 7.5s alternate infinite;
+	}
+	#box32 .color_bg {
+		animation: flasher 1.5s ease-in 7.75s alternate infinite;
+	}
+	#box33 .color_bg {
+		animation: flasher 1.5s ease-in 8s alternate infinite;
+	}
+	#box34 .color_bg {
+		animation: flasher 1.5s ease-in 8.25s alternate infinite;
+	}
+	#box35 .color_bg {
+		animation: flasher 1.5s ease-in 8.5s alternate infinite;
+	}
+	#box36 .color_bg {
+		animation: flasher 1.5s ease-in 8.75s alternate infinite;
+	}
+  
+input[type=range] {
+  background:none;
+  height: 2em;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 10em;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 1em;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #50555C;
+  background: #9BA5B3;
+  border-radius: 1em;
+  border: 0px solid #000000;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 1.25em;
+  width: 2.5em;
+  border-radius: .75em;
+  background: #529DE1;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -.125em;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #9BA5B3;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 1em;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #50555C;
+  background: #9BA5B3;
+  border-radius: 14px;
+  border: 0px solid #000000;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 1.25em;
+  width: 2.5em;
+  border-radius: .75em;
+  background: #529DE1;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 14px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #9BA5B3;
+  border: 0px solid #000000;
+  border-radius: 28px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+input[type=range]::-ms-fill-upper {
+  background: #9BA5B3;
+  border: 0px solid #000000;
+  border-radius: 28px;
+  box-shadow: 0px 0px 0px #50555C;
+}
+input[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
+  height: 1.25em;
+  width: 2.5em;
+  border-radius: .75em;
+  background: #529DE1;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #9BA5B3;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #9BA5B3;
+}
+</style>
+</head>
+
+<body>
+	<div class="page_bg">
+    
+    <div id="tile_wrap" class="container-fluid">
+      <h1 id="page_title" class="text-center">Color Squares</h1>
+      <div class="tile_con">
+        <div class="row">
+          <div class="col-2">
+            <div id="box01" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box02" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box03" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box04" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box05" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box06" class="color_box"><div class="color_bg"></div></div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-2">
+            <div id="box20" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box21" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box22" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box23" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box24" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box07" class="color_box"><div class="color_bg"></div></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div id="box19" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box32" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box33" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box34" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box25" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box08" class="color_box"><div class="color_bg"></div></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div id="box18" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box31" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box36" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box35" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box26" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box09" class="color_box"><div class="color_bg"></div></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div id="box17" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box30" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box29" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box28" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box27" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box10" class="color_box"><div class="color_bg"></div></div>
+          </div>
+
+        </div>
+        <div class="row">
+          <div class="col-2">
+            <div id="box16" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box15" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box14" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box13" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box12" class="color_box"><div class="color_bg"></div></div>
+          </div>
+          <div class="col-2">
+            <div id="box11" class="color_box"><div class="color_bg"></div></div>
+          </div>
+
+        </div>
+		  </div>
+      <br>
+      <div style="display:block;margin:auto;text-align:center;">
+        <input type="range" id="speed_range" name="speed" min="0" max="2" onchange="changeSpeed(this.value)">
+        <br>
+        <label id="speedLabel" for="speed" >Normal Speed</label>
+      </div>
+      <br>
+      <p class="text-center">Use the slider to change the speed of the color changing squares!
+      <br><br>
+      <a href="https://andrewalbright.github.io/portfolio">Back to Andrew Albright's Portfolio</a>
+        
+      </p>
+      
+    </div>
+		
+	</div>
+	
+<script>
+	$(document).ready(function() {
+		var hue = 0;
+		setInterval(function() {
+			hue = hue + 1;
+			$('.color_box').each(function() {
+				
+				$(this).css('filter','hue-rotate('+hue+'deg)');
+			});
+			
+		}, 64);
+		
+
+	});
+  
+  function changeSpeed(speedNum) {
+    var boxArr = $('.color_bg');
+    var aniFast = '.75s';
+    var aniNorm = '1.5s';
+    var aniSlow = '2.25s';
+    if (speedNum == 2) {
+      $('#speedLabel').html("Fast Speed");
+       for (i = 0; i < boxArr.length; i++) {
+        var currIndex = boxArr[i];
+        $(currIndex).css('animation-duration', aniFast);
+      }
+    }
+    if (speedNum == 1) {
+      $('#speedLabel').html("Normal Speed");
+      for (i = 0; i < boxArr.length; i++) {
+        var currIndex = boxArr[i];
+        $(currIndex).css('animation-duration', aniNorm);
+      }
+    }
+    if (speedNum == 0) {
+      $('#speedLabel').html("Slow Speed");
+      for (i = 0; i < boxArr.length; i++) {
+        var currIndex = boxArr[i];
+        $(currIndex).css('animation-duration', aniSlow);
+      }
+    }
+   
+    console.log(speedNum + ", " + $('#box02').css('animation-duration'));
+  }
+	
+	
+</script>
+</body>
+
+</html>
