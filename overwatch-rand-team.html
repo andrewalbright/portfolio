@@ -51,12 +51,10 @@
       <br><br>
       <div class="row">
         <div class="col-12">
-          <h1 class="ta_center">There are <span class="text_yellow">564,480</span> team combinations in Overwatch.<br>
-            </h1>
-          <p class="ta_center">(well, in 2-2-2 role queue)</p>
           <h2 class="ta_center">
-            Generate a random team!</h2><br>
-          <button id="randTeam">GENERATE TEAM</button>
+            Generate a random Overwatch team!</h2>
+          <br>
+          
         
         </div>
       </div>
@@ -153,6 +151,10 @@
         <div class="col-12">
           <br>
           <h1 id="team_name" class="ta_center all_caps text_yellow"></h1>
+          <br>
+          <button id="randTeam">GENERATE TEAM</button>
+          <br>
+          <p class="ta_center"><a href="https://andrewalbright.github.io/portfolio">Back to Andrew Albright's Portfolio</a></p>
         </div>
       
       </div>
@@ -160,13 +162,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-       // header
-      /*var tanks = 8 * 7;
-      var dmgs = 16 * 15;
-      var supps = 7 * 6;
-      var teams = tanks * dmgs * supps;
-      console.log("hello " + teams);
-      $('#ow_result').text(teams + " combinations");*/
+
       
       // generate a random team by selecting items from array
       $('#randTeam').click(function() {
@@ -202,7 +198,7 @@
         $('#tank2_img').attr("src","https://d1u1mce87gyfbn.cloudfront.net/hero/"+tank2_Name.toLowerCase()+"/hero-select-portrait.png");
         
         // damage
-        var dmgArr = ["ASHE", "BASTION", "DOOMFIST", "GENJI", "HANZO", "JUNKRAT", "MCCREE", "MEI", "PHARAH", "REAPER", "SOLDIER: 76", "SOMBRA", "SYMMETRA", "Torbjörn", "TRACER", "WIDOWMAKER"];
+        var dmgArr = ["ASHE", "BASTION", "DOOMFIST", "ECHO", "GENJI", "HANZO", "JUNKRAT", "MCCREE", "MEI", "PHARAH", "REAPER", "SOLDIER: 76", "SOMBRA", "SYMMETRA", "Torbjörn", "TRACER", "WIDOWMAKER"];
         var dmg1_Index = Math.floor(Math.random()*dmgArr.length);
         var dmg1_Name = dmgArr[dmg1_Index];
         $('#dmg1').html(dmg1_Name);
